@@ -1,30 +1,25 @@
-require pry
-
 class Triangle
-
-  att_accessor :side_a, :side_b, :side_c
-
-  def initialize(side_a, side_b, Side_c)
+  attr_accessor :side_a, :side_b, :side_c
+  def initialize (side_a, side_b, side_c)
     @side_a = side_a
     @side_b = side_b
     @side_c = side_c
   end
-
   def kind
-    if (@side_a =< 0) || (@side_b =< 0) || (@side_c =< 0)
+    if (@side_a <= 0) || (@side_b <= 0) || (@side_c <= 0)
       raise TriangleError
     elsif (@side_a + @side_b <= @side_c) || (@side_a + @side_c <= @side_b) || (@side_b + @side_c <= @side_a)
       raise TriangleError
     else
-      if (@side_a == @side_b) &&  (@side_b == @side_c)
-      :equilateral
-      elsif (@side_a != @side_b) && (@side_b != @side_c) && (@side_a != @side_c)
-      :scalene
-      elsif (@side_a == @side_b) || (@side_b == @side_c) || (@side_a == @side_c)
-      :isosceles
+        if (@side_a == @side_b) && (@side_b == @side_c)
+          :equilateral
+        elsif (@side_a == @side_b) || (@side_b == @side_c) || (@side_a == @side_c)
+          :isosceles
+        elsif (@side_a != @side_b) && (@side_b != @side_c) && (@side_a != @side_c)
+          :scalene
+        end
+      end
     end
-  end
 end
-
-class TriangleError < StandardError
+  class TriangleError < StandardError
 end
