@@ -20,6 +20,7 @@ class Triangle
     elsif (@side_a != @side_b) && (@side_b != @side_c) && (@side_a != @side_c)
       :scalene
     elsif (@side_a == @side_b) || (@side_b == @side_c) || (@side_a == @side_c)
+      :isosceles
     end
   end
 end
