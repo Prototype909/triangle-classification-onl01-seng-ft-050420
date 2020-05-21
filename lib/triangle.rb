@@ -1,4 +1,4 @@
-require pry 
+require pry
 
 class Triangle
 
@@ -11,7 +11,7 @@ class Triangle
   end
 
   def kind
-    if 
+    if
       triangle == && triangle2 == true
     else
       puts true
