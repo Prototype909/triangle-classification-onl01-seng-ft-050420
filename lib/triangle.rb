@@ -5,3 +5,6 @@ class Triangle
     @side_b = side_a
     @side_c = side_c
 end
+
+class TriangleError < StandardError
+end
