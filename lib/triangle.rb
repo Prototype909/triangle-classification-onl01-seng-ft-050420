@@ -11,15 +11,10 @@ class Triangle
   end
 
   def kind
-    if
-      triangle == && triangle2 == true
-    else
-      puts true
-    else
+    if (@side_a =< 0) || (@side_b =< 0) || (@side_c =< 0)
       raise TriangleError
     end
   end
-
 end
 
 class TriangleError < StandardError
